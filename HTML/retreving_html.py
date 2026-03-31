@@ -1,5 +1,9 @@
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..')) 
 import requests
 from fake_useragent import UserAgent
+from proxies.proxy import proxy
 import time
 
 url="https://www.flipkart.com/search?q=mobiles&as=on&as-show=on&otracker=AS_Query_TrendingAutoSuggest_1_0_na_na_na&otracker1=AS_Query_TrendingAutoSuggest_1_0_na_na_na&as-pos=1&as-type=TRENDING&suggestionId=mobiles&requestId=e00600e7-ac13-402c-bd72-1ea1a2d6a806"
@@ -16,6 +20,6 @@ headers={
 }
 
 time.sleep(2)
-response=session.get(url)
+response=session.get(url,proxies=proxy,headers=headers)
 with open("mobiles.html", "w", encoding="utf-8") as file:
     file.write(response.text)
