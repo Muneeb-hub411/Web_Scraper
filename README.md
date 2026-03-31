@@ -42,3 +42,6 @@ The goal of this project is to create a reusable and scalable scraping system th
 Disclaimer
 
 This project is created for educational and research purposes only. Always respect website terms of service, robots.txt policies, and local laws before scraping any website.
+
+#Things_to_Note
+I am using free rotating api for scraperApi and its not working in my country(PK) so if you are facing same issue use VPN :)
